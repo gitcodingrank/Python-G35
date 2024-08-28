@@ -1,0 +1,10 @@
+Comment: to know for the developer and others what particular code is all about.
+Note: your python interpreter doesn't understand comment, it ignores comment.
+syntax:how to use particular concept in python
+# single line comment: 
+
+""" 
+multiline comment
+below is the code for login functionality
+where user can easily login
+"""
