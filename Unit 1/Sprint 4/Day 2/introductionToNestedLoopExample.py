@@ -65,9 +65,12 @@ Father Round 1: Son Rounds: 1 2 3 4 5
 Father Round 2: Son Rounds: 1 2 3 4 5
 """
 
-for father in range(1,3):
-    sonBag = ""
-    for son in range(1, 6):
-        sonBag+=str(son)+" "
-    print(f"Father Round: {father}: Son Rounds: {sonBag}")
+# for father in range(1,3):
+#     sonBag = ""
+#     for son in range(1, 6):
+#         sonBag+=str(son)+" "
+#     print(f"Father Round: {father}: Son Rounds: {sonBag}")
+
+
+
 
