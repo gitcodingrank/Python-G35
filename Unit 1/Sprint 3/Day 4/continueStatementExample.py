@@ -13,13 +13,11 @@ while condition:
 
 #Example: print number fro 1 to 10 but skip 5 and 7
 
-sp = 0
+# sp = 0
 
-while sp<=10:
+# while sp<=10:
 
-    sp+=1
-    if sp==5 or sp == 7:
-        continue
-    print(sp)
-
-    
+#     sp+=1
+#     if sp==5 or sp == 7:
+#         continue
+#     print(sp)
