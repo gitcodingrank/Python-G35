@@ -126,9 +126,8 @@ langs = []
 
 #Conclusion: List is the best choice according to the following points:
 
-#1. List is the best choice you're using it for traversing/searching/visiting each element.
+#1. List is the best choice you're using it for traversing/updating/searching/visiting each element.
 #2. List is the best choice if you're using it for same type of data not for different type.
-
 
 # names = ["Rakesh", "Sahil", "Mahi"]
 # ages = [23, 18, 28]
@@ -137,28 +136,147 @@ langs = []
 
 #or
 
-person = ["Rakesh", 23, True, "Noida", "Sahil", 18, False, "Delhi", "Mahi", 28, False, "Gurugram"]
+# person = ["Rakesh", 23, True, "Noida", "Sahil", 18, False, "Delhi", "Mahi", 28, False, "Gurugram"]
 
 #Find out the age of Rakesh
-
 #To find out the age of Rakesh first you need to filter the proper data.
 
-names = []
-for i in range(0, len(person), 4):
-    names.append(person[i])
+# person = ["Rakesh", 23, True, "Noida", "Sahil", 18, False, "Delhi", "Mahi", 28, False, "Gurugram"]
 
-ages = []
+# #Extra Work
+# names = []
+# for i in range(0, len(person), 4):
+#     names.append(person[i])
+# print(names)
 
-for i in range(1, len(person), 4):
-    ages.append(person[i])
+# ages = []
+# for i in range(1, len(person), 4):
+#     ages.append(person[i])
+# print(ages)
 
-print(ages)
+# meritalStatus = []
+# for i in range(2, len(person), 4):
+#     meritalStatus.append(person[i])
+# print(meritalStatus)
 
-meritalStatus = []
+# cities = []
+# for i in range(3, len(person), 4):
+#     cities.append(person[i])
+# print(cities)
 
-for i in range(2, len(person), 4):
-    meritalStatus.append(person[i])
 
-print(meritalStatus)
+# #Real Logic
+# for i in range(len(names)):
+#     if names[i] =="Rakesh":
+#         print("Age of Rakesh",ages[i])
+
+#3. List is the bad choice, if your frequent operation is adding and deleting at specefic index.
+
+#Example: Addition
+
+numbers = [1,2,3,4,5]
+
+#Add 10 at index 1
+#insert(index, data)
+#Syntax: listName.insert(index, data)
+# numbers.insert(1, 10)
+# print(numbers) # [1,10,2,3,4,5]
+
+#Example: Delition
+
+# numbers = [1,2,3,4,5]
+#Delete element at index 2
+
+#NOte: in above Example as well there will be lots of shifting will happen.
+
+#Assingment:
+#Problem 1: delete element at particular index.
+#Problem 2: add element at particular index without insert()
+
+
+#Good Example 1: Take input for numbers from user and add to the list.
+
+# numList = []
+# num = int(input("Enter Numbers: "))
+# numList.append(num)
+
+# print(numList)
+
+# numList = []
+
+# #taking input for numList
+# while True:
+#     num = int(input("Enter Numbers: "))
+#     numList.append(num)
+
+#     res = input("Do you want to add more numbers(Y/N): ")
+#     if res =='N' or res=='n':
+#         print("Current List: ",numList)
+#         break
+
+# #for operation on numList
+
+# print("Welcome to My Applicaiton")
+# while True:
+#     print("1. Sum of All Numbers")
+#     print("2. Average of All Numbers")
+#     print("3. List Even Numbers")
+#     print("4. List Odd Numbers")
+#     print("5. Sum of Even Numbers")
+#     print("6. Sum of Odd Numbers")
+#     print("7. Exit")
+#     choice = int(input("Enter Your Choice: "))
+
+#     if choice==1:
+#         #logic of sum of all numbers
+#         sum = 0
+#         for num in numList:
+#             sum+=num
+#         print("Sum of All Numbers: ",sum)
+#     elif choice==2:
+#         #logic for average of all numbers
+#         sum = 0
+#         for num in numList:
+#             sum+=num
+#         print("Average of All Numebrs: ",sum/len(numList))
+#     elif choice ==3:
+#         #logic for list all even numbers
+#         print("Even Numbers: ", end='')
+#         for num in numList:
+#             if num%2==0:
+#                 print(num, end=" ")
+#         print()
+#     elif choice ==4:
+#         #logic for list all odd numbers
+#         print("Odd Numbers: ", end='')
+#         for num in numList:
+#             if num%2!=0:
+#                 print(num, end=" ")
+#         print()
+
+#     elif choice ==5:
+#          #sum of all even numbers
+#         evenSum = 0
+#         for num in numList:
+#             if num%2==0:
+#                 evenSum+=num
+#         print("Sum of Even Numbers: ",evenSum)
+#     elif choice == 6:
+#         #sum of all odd numbers
+#         oddSum = 0
+#         for num in numList:
+#             if num%2!=0:
+#                 oddSum+=num
+#         print("Sum of Odd Numbers: ",oddSum)
+#     elif choice == 7:
+#         res = input("Do you want to exit(Y/N): ")
+#         if res=='Y' or res =='y':
+#             print("Thank you for using applicaiton!")
+#             break
+#     else:
+#         print("Invalid Choice")
+
+
+
 
 
