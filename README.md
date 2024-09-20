@@ -70,3 +70,37 @@ user_age = 25  # This is a human-friendly name for a memory location
 ``` 
 
 Using variable names makes it easier to manage and understand our code!
+
+# What is a Variable?
+
+## General Definition
+A variable is a named memory location whose value can be changed.
+
+## Python-Specific Definition
+In Python, a variable is a reference to a memory location (called an object) that holds the value. This means that a variable does not store the value directly; instead, it stores the location of the object where the value is actually stored.
+
+### Creating a Variable in Python
+```python
+variable_name = value
+```
+
+### Variable Naming Rules
+1. Can consist of a combination of A-Z, a-z, 0-9, and the special symbol `_`.
+2. Cannot start with a digit.
+3. Cannot contain commas or spaces.
+4. Must not be a reserved keyword.
+5. **Convention:** Variable names should be meaningful.
+
+### Examples of Valid Variable Names
+- `a`
+- `abc`
+- `basic_salary`
+- `gold9`
+- `simple123_321`
+
+### Examples of Invalid Variable Names
+- `9gold` (cannot start with a digit)
+- `basic salary` (cannot contain space)
+- `basic,salary` (cannot contain comma)
+- `if`, `elif`, `def` (reserved keywords)
+- `123*123` (cannot contain special symbols other than `_`)
