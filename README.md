@@ -92,10 +92,10 @@ variable_name = value
 5. **Convention:** Variable names should be meaningful.
 
 ### Naming Conventions
-- **CamelCase Naming Convention:** Each word starts with a capital letter, and there are no spaces or underscores.
+- **camelCaseNamingConvention:** Each word starts with a capital letter, and there are no spaces or underscores.
   - **Example:** `basicSalary`, `userAge`
   
-- **Snake_Case Naming Convention:** Words are all lowercase and separated by underscores.
+- **snake_case_naming_convention:** Words are all lowercase and separated by underscores.
   - **Example:** `basic_salary`, `user_age`
 
 ### Examples of Valid Variable Names
