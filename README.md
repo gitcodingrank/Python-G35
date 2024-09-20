@@ -113,3 +113,219 @@ variable_name = value
 - `basic,salary` (cannot contain comma)
 - `if`, `elif`, `def` (reserved keywords)
 - `123*123` (cannot contain special symbols other than `_`)
+
+# Understanding Variables, Data Types, and Operators in Python
+
+## Checking Data Types
+In Python programming, the `type()` function is used to check the data type of a variable.
+
+### Example
+```python
+age = 17
+print(age, type(age))
+percentage = 85.25
+print(percentage, type(percentage))
+st_name = "Om"
+print(st_name, type(st_name))
+gender = 'M'
+print(gender, type(gender))
+```
+
+### Execution
+```
+stack          heap
+|74859658|--->|___17___| (object)
+    age        74859658
+
+|74253698|--->|__85.25_| (object)
+percentage     74253698
+
+|74147859|--->|__Om_| (object)
+  st_name     74147859
+
+|74268952|--->|__M_| (object)
+  gender     74268952
+```
+
+### Output
+```
+17 <class 'int'>
+85.25 <class 'float'>
+Om <class 'str'>
+M <class 'str'>
+```
+
+## Memory Storage of Python Variables
+During execution, every process occupies some space in the RAM called **address space**. The address has the following parts:
+
+1. **Data Segment:** Contains values and variables. It includes:
+   - **Stack:**
+     - Memory can be given a human-friendly name.
+     - Memory allocation is fast and cannot be resized (static).
+   - **Heap:**
+     - Memory cannot be named.
+     - Memory allocation is slower and can be resized (dynamic).
+
+2. **Code Segment:** Contains functions and statements.
+
+### Print Function
+The `print()` function is used to output text to the terminal.
+```python
+print(argument, sep=' ', end='\n')  # \n is for a new line
+```
+- The `end` parameter specifies what to print after the statement completes.
+- The `sep` parameter specifies the default separator when multiple values are printed.
+
+### Example of Print Function
+```python
+print("Masai")
+print("School")
+print("Masai", "School")
+```
+
+### Output
+```
+Masai
+School
+Masai School
+```
+
+You can change the values for `sep` and `end` parameters:
+```python
+print("Masai School", "Bengaluru", sep=', ')
+print("Masai", end='-')
+print("A tribe that survives by skills")
+print("Masai", "Bengaluru", "Karnataka", sep=' : ', end=' # ')
+print("859674")
+```
+
+### Output
+```
+Masai School, Bengaluru
+Masai-A tribe that survives by skills
+Masai : Bengaluru : Karnataka # 859674
+```
+
+### Variable Example
+```python
+name = 'Anuj'
+age = 18
+state = 'Gujarat'
+print(name, "of age", age, "from", state, "will vote for the first time.")
+print("name of age age from state will vote for first time.")
+```
+
+### Output
+```
+Anuj of age 18 from Gujarat will vote for the first time.
+name of age age from state will vote for first time.
+```
+
+## Typecasting in Python
+Typecasting is converting a value from one data type to another. 
+
+- `"1"` is a string value.
+- `1` is an integer.
+- `1.0` is a float value.
+
+### Conversion Functions
+- `str(parameter)`: Converts parameter to string value.
+- `int(parameter)`: Converts parameter to integer value.
+- `float(parameter)`: Converts parameter to float value.
+
+### Example of Typecasting
+```python
+a = 1
+b = a
+c = str(b)  # converting int to str
+d = float(a)  # converting int to float
+print(a, type(a))  # 1, <class 'int'>
+print(b, type(b))  # 1, <class 'int'>
+print(c, type(c))  # '1', <class 'str'>
+print(d, type(d))  # 1.0, <class 'float'>
+```
+
+```python
+print()  # just to insert a new line in the output
+
+e = 1.5
+f = int(e)
+g = str(e)
+print(e, type(e))  # 1.5, <class 'float'>
+print(f, type(f))  # 1, <class 'int'>
+print(g, type(g))  # '1.5', <class 'str'>
+```
+
+## Comments
+Comments are written for human understanding; machines do not read them. In Python, comments start with `#`.
+
+### Example
+```python
+# This is a single line comment
+
+# This is
+# a multi-line
+# comment
+```
+
+## Data Types in Python
+A data type defines:
+- (i) The range/set of values for a variable.
+- (ii) The operations that can be performed on a variable.
+
+### Classification of Data Types
+- **Number:**
+  - `int`: Non-fractional numbers.
+  - `float`: Fractional numbers.
+  - `boolean`: Only two values: `True` or `False`.
+  - `complex`: Not covered here.
+  
+- **Sequence:**
+  - `string`: Anything inside `''` or `""`.
+  - `list`: Discussed later.
+  - `tuple`: Discussed later.
+
+- **Set:**
+  - `set`: Discussed later.
+
+- **None:**
+  - `None`: Discussed later.
+
+- **Mapping:**
+  - `Dictionary`: Discussed later.
+
+### Example
+```python
+# Print statement for Kid's Education and "Good Morning"
+print("Kid's education")
+print('"Good Morning"')
+```
+
+## Operators, Operands, and Expressions
+- **Operator:** A symbol that represents an operation (e.g., `+`, `~`, `<`, `>`).
+- **Operand:** A variable or value on which the operation is applied.
+- **Expression:** A valid combination of operators and operands.
+
+### Example
+```python
+a = 10 + 20  # This is an expression
+# Operators: +, =
+# Operands: for +; 10 & 20 are operands, for =; a & 30 are operands.
+```
+
+### Types of Operators
+1. **Based on the Number of Operands:**
+   - **Unary Operator:** Applicable on one operand.
+     ```python
+     a = -10  # Here, - is unary
+     ```
+   - **Binary Operator:** Applicable on two operands.
+     ```python
+     a = 10 - 5  # Here, - is binary
+     ```
+   - **Ternary Operator:** Applicable on three operands (discussed later).
+
+2. **Based on the Nature of Operations:**
+   - Arithmetic operators
+   - Relational operators
+   - Logical operators
