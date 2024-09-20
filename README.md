@@ -329,3 +329,103 @@ a = 10 + 20  # This is an expression
    - Arithmetic operators
    - Relational operators
    - Logical operators
+
+# Arithmetic and Relational Operators in Python
+
+## Arithmetic Operators
+Arithmetic operators are used for basic arithmetic operations:
+- `+` (Addition)
+- `-` (Subtraction)
+- `*` (Multiplication)
+- `/` (Division)
+- `//` (Floor Division)
+- `%` (Modulus)
+- `**` (Exponential)
+
+### Example
+```python
+print(10 + 5)  # 15
+print(10 - 3)  # 7
+print(10 * 3)  # 30
+print(10 / 3)  # 3.33333333
+
+# Floor Division
+print(10 // 3)  # 3 (quotient only)
+
+# Modulus
+print(10 % 3)  # 1
+print(10 % 2)  # 0
+print(10 % 5)  # 0
+print(10 % 1)  # 0
+print(10 % 10) # 0
+
+# Exponential
+print(2 ** 3)      # 8
+print(36 ** 0.5)   # 6
+print(3 ** 3)      # 27
+```
+
+### Operator Precedence
+Operators are evaluated based on their priority, and the order of precedence is:
+1. `()` (Parentheses)
+2. `**` (Exponential)
+3. `*`, `/`, `//`, `%` (Multiplication/Division)
+4. `+`, `-` (Addition/Subtraction)
+
+For operators with the same priority, their execution is based on associativity:
+- Right to left: `**, =`
+- Left to right: `*, /, //, %, +, -`
+
+### Example of Operator Precedence
+```python
+print(2 ** 3 // 5 + 4)  # Output: 5
+print(10 * 3 // 4)      # Output: 7
+print(2 ** 4 * 8 + 24 + (4 // 3))  # Output: 153
+print(3 * 6 / 5)        # Output: 3.6
+print(3 * 6 // 5)       # Output: 3
+print(3 // 6 * 5)       # Output: 0
+print(2 ** 3 ** 2)      # Output: 512
+```
+
+## Relational Operators
+Relational operators are used for comparison and return either `True` or `False`:
+- `>`, `<`, `>=`, `<=`, `==`, `!=`
+
+### Example
+```python
+print(10 > 5)   # True
+print(5 > 10)   # False
+print(10 < 5)   # False
+print(5 < 10)   # True
+print(10 <= 10) # True
+print(10 >= 5)  # True
+print(10 == 10) # True
+print(10 != 5)  # True
+```
+
+### Tip
+- `a = 5` assigns the value `5` to `a`.
+- `a == 5` checks if the value of `a` is `5`.
+
+## Compound Assignment Operators
+Shorthand operators for updating variables:
+- `+=` (Add and assign)
+- `-=` (Subtract and assign)
+- `*=` (Multiply and assign)
+- `/=` (Divide and assign)
+- `%=` (Modulus and assign)
+- `//=` (Floor divide and assign)
+
+### Example
+```python
+a = 10
+a += 2   # Now a is 12
+a -= 5   # Now a is 7
+a *= 2   # Now a is 14
+a //= 5  # Now a is 2
+a %= 2   # Now a is 0
+print(a)  # Output: 0
+```
+
+### Note
+The increment (`++`) and decrement (`--`) operators are not available in Python.
