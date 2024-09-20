@@ -91,12 +91,21 @@ variable_name = value
 4. Must not be a reserved keyword.
 5. **Convention:** Variable names should be meaningful.
 
+### Naming Conventions
+- **CamelCase Naming Convention:** Each word starts with a capital letter, and there are no spaces or underscores.
+  - **Example:** `basicSalary`, `userAge`
+  
+- **Snake_Case Naming Convention:** Words are all lowercase and separated by underscores.
+  - **Example:** `basic_salary`, `user_age`
+
 ### Examples of Valid Variable Names
 - `a`
 - `abc`
 - `basic_salary`
 - `gold9`
 - `simple123_321`
+- `basicSalary` (CamelCase)
+- `userAge` (CamelCase)
 
 ### Examples of Invalid Variable Names
 - `9gold` (cannot start with a digit)
