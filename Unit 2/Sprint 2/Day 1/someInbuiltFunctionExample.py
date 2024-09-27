@@ -58,7 +58,7 @@ Function vs Method
 -Functions are not dependent on any object whereas Methods are depended on some object.
 """
 #List Methods:
-#append(), insert(), pop(),remove(element)  reverse(), copy(), sort(), filter(), map(), reduce(), count(), index()
+#append(), insert(), pop(),remove(element)  reverse(), copy(), sort(), count(), index()
 
 nums = [1,2,3,4,5,6,7,8,9,10]
 #syntax: list.methods()
