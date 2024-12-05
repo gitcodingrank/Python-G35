@@ -3,6 +3,7 @@ from tkinter.messagebox import showerror, showinfo, showwarning
 import uuid
 import os
 import json
+import csv
     #os - renameFile, deleteFile, check file is there or not.
     
 def getStudents():
@@ -41,7 +42,15 @@ def registerStudent():
     except ValueError as e:
             showwarning(title="All Fields Required", message=f"{str(e)}")
 
+def downloadStudentDataInCsv():
+    studentData = getStudents()["students"]
+    print(studentData)
 
+    with open('data.csv', 'w', newline='') as file:
+        writer = csv.DictWriter(file, fieldnames=["id","name", "email", "city"])
+        writer.writeheader()
+        writer.writerows(studentData)
+        showinfo(title="Successfully Downloaed",message="data.csv file has downloaded in the current folder.")
 
 
 win = Tk()
@@ -89,7 +98,10 @@ cityEntry = Entry(registrationFrame, font=(25), textvariable=city)
 cityEntry.place(x=140, y=140, width=300, height=30)
 
 
-btn = Button(registrationFrame, text="   Student", command=registerStudent, bg="yellow", font=(25))
+btn = Button(registrationFrame, text="Register Student", command=registerStudent, bg="yellow", font=(25))
 btn.place(x=20, y=200, width=200, height=30)
+
+csvBtn = Button(registrationFrame, text="Download Student Data", command=downloadStudentDataInCsv, bg="white", font=(25))
+csvBtn.place(x=20, y=240, width=250, height=30)
 
 win.mainloop()
