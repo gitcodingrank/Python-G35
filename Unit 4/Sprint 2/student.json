@@ -1,0 +1,22 @@
+{
+    "students": [
+        {
+            "id": "166021570026273",
+            "name": "Rakesh",
+            "email": "rakesh@gmail.com",
+            "city": "Noida"
+        },
+        {
+            "id": "285631490141918",
+            "name": "Rakesh",
+            "email": "rakesh@gmail.com",
+            "city": "Noida"
+        },
+        {
+            "id": "311088653219938",
+            "name": "pawan",
+            "email": "pawan@gmail.com",
+            "city": "delhi"
+        }
+    ]
+}
